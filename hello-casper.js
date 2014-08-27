@@ -13,5 +13,10 @@ casper.then(function() {
 	casper.capture("suzumekawaii.png");
 });
 
+// 指定した URL へ遷移する
+casper.start("http://qiita.com/", function() {
+    this.echo(this.getTitle());
+});
+
 // 処理を開始する
 casper.run();
