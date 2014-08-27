@@ -1,1 +1,20 @@
 ﻿box: wercker/default
+
+deploy:
+    steps:
+        - script:
+            name: phantomjs
+            code: npm install phantomjs
+        - script:
+            name: casperjs
+            code: npm install -g casperjs
+        - script:
+            name: phantomjs version
+            code: phantomjs --version
+        - script:
+            name: casperjs version
+            code: casperjs --version
+        - script:
+            name: run casperjs
+            code: casperjs hello-casper.js
+
