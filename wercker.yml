@@ -2,6 +2,7 @@
 
 deploy:
     steps:
+        - npm-install
         - script:
             name: phantomjs
             code: npm install phantomjs
